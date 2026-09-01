@@ -7,5 +7,5 @@ if (MONGO_URL && !mongoose.connection.readyState) {
 }
 
 module.exports = {
-  Todo
+  Todo,
 }
