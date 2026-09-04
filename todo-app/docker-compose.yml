@@ -1,8 +1,6 @@
 services:
   app:
     image: todo-front
-    volumes:
-      - ./todo-frontend:/usr/src/app
     container_name: todo-frontend
 
   mongo:
