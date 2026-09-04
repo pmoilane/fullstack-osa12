@@ -6,7 +6,7 @@ COPY --chown=node:node . .
 
 RUN npm ci
 
-RUN npm list -g --depth=0
+RUN npm list
 
 USER node
 
