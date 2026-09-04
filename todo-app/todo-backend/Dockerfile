@@ -8,6 +8,4 @@ RUN npm ci
 
 USER node
 
-ENV DEBUG=todo-backend:*
-
 CMD ["npm", "start"]
