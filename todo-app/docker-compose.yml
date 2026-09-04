@@ -1,9 +1,6 @@
 services:
   app:
     image: todo-front
-    build:
-      context: ./todo-frontend
-      dockerfile: Dockerfile
     volumes:
       - ./todo-frontend:/usr/src/app
     container_name: todo-frontend
@@ -29,9 +26,6 @@ services:
       start_period: 10s
   backend:
     image: todo-backend
-    build:
-      context: ./todo-backend
-      dockerfile: Dockerfile
     volumes:
       - ./todo-backend:/usr/src/app
     environment:

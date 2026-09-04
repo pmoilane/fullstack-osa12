@@ -6,8 +6,6 @@ COPY --chown=node:node . .
 
 RUN npm ci
 
-RUN npm list
-
 USER node
 
 CMD ["npm", "start"]
