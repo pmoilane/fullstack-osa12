@@ -13,15 +13,18 @@ if (!REDIS_URL) {
   get = redisIsDisabled
 } else {
   let client = redis.createClient({
-    url: REDIS_URL
+    url: REDIS_URL,
+    socket: {
+      connectTimeout: 15000,
+    },
   })
 
   client.on('error', (err) => console.log('Redis Client Error', err))
-  
+
   client.connect().then(() => {
     console.log('Connected to Redis')
   })
-    
+
   get = (...args) => client.get(...args)
   set = (...args) => client.set(...args)
 }
